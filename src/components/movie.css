@@ -1,0 +1,12 @@
+.cardMain {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 14px;
+    width: 18rem;
+    margin: 12px;
+}
+
+.cardImg {
+    width: 200px; margin: 20px; height: 250px;
+}
