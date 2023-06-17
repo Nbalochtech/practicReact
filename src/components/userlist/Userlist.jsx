@@ -12,6 +12,7 @@ const Userlist = () => {
     setName("");
     setEmail("");
   };
+
   return (
     <>
       <div className="container">
@@ -42,7 +43,7 @@ const Userlist = () => {
           </div>
         </div>
         <br />
-        <UserTable data={data} />
+        <UserTable data={data} setData={setData} />
       </div>
     </>
   );

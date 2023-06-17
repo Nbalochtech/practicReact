@@ -1,10 +1,11 @@
 // import Movie from "./components/Movie";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/general/Navbar";
 // import movies from "./movies.json";
 
 import "./App.css";
+import APIdata from "./components/apiwork/APIdata";
 // import Incdec from "./components/Incdec";
-import Userlist from "./components/Userlist";
+import Userlist from "./components/userlist/Userlist";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       </div>
       <Incdec className={App} /> */}
       <Userlist />
+      {/* <APIdata /> */}
     </>
   );
 }
