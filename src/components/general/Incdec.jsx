@@ -11,7 +11,8 @@ const Incdec = () => {
   };
   return (
     <>
-      <h1>{counter}</h1>
+      <h1>Increament and decreament</h1>
+      <h4>{counter}</h4>
       <br />
       <button onClick={() => dec(2)}> - Decreament</button>
       <button onClick={() => inc(5)}> + Increament</button>
