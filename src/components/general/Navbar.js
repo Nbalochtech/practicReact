@@ -1,14 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
+  const navLinkStyles = ({ isActive }) => {
+    console.log(isActive);
+    return {
+      fontweight: isActive ? "bold" : "normal",
+      textDecoration: isActive ? "underline" : "none",
+      backgroundColor: isActive ? "green" : "white",
+      color: isActive ? "white" : "black",
+    };
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <Link className="navbar-brand bg-danger" to={"/"}>
+          <NavLink className="navbar-brand" to={"/"}>
             ...Practice React...
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,19 +32,23 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to={"/"}>
+                <NavLink style={navLinkStyles} className="nav-link" to={"/"}>
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/about"}>
+                <NavLink
+                  style={navLinkStyles}
+                  className="nav-link "
+                  to={"/about"}
+                >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  // href="/"
+                  href=""
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -44,34 +57,54 @@ export default function Navbar() {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={"/text"}>
+                    <NavLink
+                      style={navLinkStyles}
+                      className="dropdown-item"
+                      to={"/text"}
+                    >
                       Text App
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/movies"}>
+                    <NavLink
+                      style={navLinkStyles}
+                      className="dropdown-item"
+                      to={"/movies"}
+                    >
                       Movies
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/incdec"}>
+                    <NavLink
+                      style={navLinkStyles}
+                      className="dropdown-item"
+                      to={"/incdec"}
+                    >
                       Inc/Dec
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link to={"/apidata"} className="nav-link">
+                <NavLink
+                  style={navLinkStyles}
+                  to={"/apidata"}
+                  className="nav-link"
+                >
                   Employee List
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to={"/users"} className="nav-link">
+                <NavLink
+                  style={navLinkStyles}
+                  to={"/users"}
+                  className="nav-link"
+                >
                   Users
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">
