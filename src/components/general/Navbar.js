@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const navLinkStyles = ({ isActive }) => {
-    console.log(isActive);
     return {
       fontweight: isActive ? "bold" : "normal",
       textDecoration: isActive ? "underline" : "none",
@@ -48,7 +47,7 @@ export default function Navbar() {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href=""
+                  href="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"

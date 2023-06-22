@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const APIdata = () => {
+  // let numover = 10;
   const [numEmp, setNumEmp] = useState(10);
   let numover = numEmp < 1 ? 1 : numEmp;
   const [dataAPI, setDataAPI] = useState([]);
@@ -14,10 +16,9 @@ const APIdata = () => {
       const res = await apilinkdata.json();
 
       setDataAPI(res);
-      console.log(res);
     }
     getData();
-  }, [numEmp]);
+  }, [numover]);
   return (
     <>
       <div className="container">
@@ -38,7 +39,7 @@ const APIdata = () => {
               <th scope="col">Contact Number</th>
               <th scope="col">Date of Birth</th>
               <th scope="col">Email</th>
-              <th scope="col">Image</th>
+              <th scope="col">Controller</th>
             </tr>
           </thead>
           <tbody>
@@ -52,13 +53,14 @@ const APIdata = () => {
                   <td>{data.dob}</td>
                   <td>{data.email}</td>
                   <td>
-                    <img src={data.imageUrl} />
+                    <Link to={`/apidata/${data.id}`} className="btn btn-primary">Details</Link>
                   </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        <Outlet />
       </div>
     </>
   );

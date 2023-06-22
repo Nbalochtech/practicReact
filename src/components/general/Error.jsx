@@ -15,7 +15,7 @@ const Error = () => {
           <p class="card-text">
             Sorry! there is an Error. Which is not Found the Page
           </p>
-          <button class="btn btn-primary" onClick={() => navigate(-1)}>
+          <button className="btn btn-primary" onClick={() => navigate(-1)}>
             <Icon.Arrow90degLeft size={20} /> Go Back
           </button>
         </div>

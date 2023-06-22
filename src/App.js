@@ -10,6 +10,8 @@ import Incdec from "./components/general/Incdec";
 import Userlist from "./components/userlist/Userlist";
 import APIdata from "./components/apiwork/APIdata";
 import Error from "./components/general/Error";
+import MovieDetails from "./components/movies/MovieDetails";
+import ApiDetails from "./components/apiwork/ApiDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/text" element={<Text />} />
           <Route path="/movies" element={<ShowMovies />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
+          <Route path="/apidata" element={<APIdata />} />
+          <Route path="/apidata/:empId" element={<ApiDetails />} />
           <Route path="/incdec" element={<Incdec className={App} />} />
           <Route path="/users" element={<Userlist />} />
-          <Route path="/apidata" element={<APIdata />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
