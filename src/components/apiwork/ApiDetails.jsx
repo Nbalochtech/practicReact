@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import * as Icon from "react-bootstrap-icons";
 import { useContext, useEffect, useState } from 'react';
 import { SendData } from '../../App';
+// import useFetch from '../useFetch';
 
 const ApiDetails = () => {
     const contxt = useContext(SendData);
@@ -19,7 +20,7 @@ const ApiDetails = () => {
         }
         getEmp();
     }, [empId]);
-    console.log(contxt.userData.isMarri);
+
     return (
         <>
             <div className="container mt-5">

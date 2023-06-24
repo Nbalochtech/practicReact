@@ -5,15 +5,15 @@ const APIdata = () => {
   const [numEmp, setNumEmp] = useState(10);
   let numover = numEmp < 1 ? 1 : numEmp;
   const [dataAPI, setDataAPI] = useState([]);
-  const [prevInputValue, setPrevInputValue] = useState([]);
-  const previnput = useRef();
+  // const [prevInputValue, setPrevInputValue] = useState([]);
+  // const previnput = useRef();
   const inputField = useRef();
 
   const inputHanlde = (e) => {
     setNumEmp(e.target.value);
   };
   const SearchHandle = () => {
-    console.log(inputField.current.value);
+    // console.log(inputField.current.value);
   };
 
   // useEffect(() => {
@@ -33,6 +33,7 @@ const APIdata = () => {
     }
     getData();
   }, [numover]);
+
   return (
     <>
       <div className="container">
