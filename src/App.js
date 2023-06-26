@@ -12,6 +12,7 @@ import APIdata from "./components/apiwork/APIdata";
 import Error from "./components/general/Error";
 import MovieDetails from "./components/movies/MovieDetails";
 import ApiDetails from "./components/apiwork/ApiDetails";
+import UsecustomHooks from "./components/customHooks/UsecustomHooks";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createContext } from "react";
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/song" element={<Songs />} />
               <Route path="/pic" element={<Pictures />} />
             </Route>
+            <Route path="/cstmHooks" element={<UsecustomHooks />} />
             <Route path="/about" element={<About />} />
             <Route path="/text" element={<Text />} />
             <Route path="/movies" element={<ShowMovies />} />

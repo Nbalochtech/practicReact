@@ -74,6 +74,15 @@ export default function Navbar() {
                     </NavLink>
                   </li>
                   <li>
+                    <NavLink
+                      style={navLinkStyles}
+                      className="dropdown-item"
+                      to={"/cstmHooks"}
+                    >
+                      Custom Hooks
+                    </NavLink>
+                  </li>
+                  <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
