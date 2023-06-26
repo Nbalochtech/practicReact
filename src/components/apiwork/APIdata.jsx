@@ -7,9 +7,8 @@ const APIdata = () => {
   const [numEmp, setNumEmp] = useState(1000);
   let numover = numEmp < 1 ? 1 : numEmp;
   const [dataAPI, setDataAPI] = useState([]);
-  const [loading, setLoading] = useState(false);
-  // const [prevInputValue, setPrevInputValue] = useState([]);
-  // const previnput = useRef();
+  const [prevInputValue, setPrevInputValue] = useState([]);
+  const previnput = useRef();
   const inputField = useRef();
 
   const inputHanlde = (e) => {
