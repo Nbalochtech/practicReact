@@ -4,6 +4,7 @@ import { FallingLines } from "react-loader-spinner";
 import "./apiloading.css";
 
 const APIdata = () => {
+  const [loading, setLoading] = useState(false);
   const [numEmp, setNumEmp] = useState(1000);
   let numover = numEmp < 1 ? 1 : numEmp;
   const [dataAPI, setDataAPI] = useState([]);
